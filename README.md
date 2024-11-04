@@ -1,15 +1,11 @@
-When including another page within a fragment, the rendered=false of fragments within the other page are ignored.
+If another page is included within a fragment, the rendered=false of fragments within the other page will be ignored.
 
-In this example, there are to pages A and B.
-Page A has a fragment named content, inside of this fragment, the Page B is included.
-Page B has two fragments with rendered=false, only the first one is rendered with include.
+In this example, there are two pages A and B. Page A has a fragment called "content" which includes page B. Page B has two fragments with rendered=false, only the first is rendered with include.
 
 There are two endpoints:
-/page/ok -> Renders the Page A completet
-/page/wrong -> Only renders the content fragment within Page A.
+- /page/ok -> renders page A completely
+- /page/wrong -> renders only the content fragment within page A.
 
-The endpoint "ok" renders as expected.
-The endpoint "worng" contains the fragments A and B from page B, although the rendered property was set to false. 
+The "ok" endpoint renders as expected. The "wrong" endpoint contains the A and B fragments from page B, even though the rendered property was set to false.
 
-Expected Behaviour:
-Both endpoints should produce the same output on screen. 
+Expected behaviour: Both endpoints should produce the same output on screen.
