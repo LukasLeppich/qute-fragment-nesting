@@ -1,0 +1,13 @@
+{#include $fragA /}
+
+<p>Fragments should not be rendered:</p>
+
+{#fragment id="fragA" rendered=false}
+<p>Fragment B -> A</p>
+{/fragment}
+
+{#fragment id="fragB" rendered=false}
+<p>Fragment B -> B</p>
+{/fragment}
+
+<p>End of fragments part</p>
